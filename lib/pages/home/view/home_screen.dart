@@ -6,13 +6,25 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final colorScheme = Theme.of(context).colorScheme;
+    final textColor = colorScheme.onPrimary;
+    final buttonColor = colorScheme.primary;
+
     return Scaffold(
       body: Center(
         child: TextButton(
+          style: TextButton.styleFrom(
+            backgroundColor: buttonColor,
+            foregroundColor: textColor,
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(8),
+            ),
+          ),
           onPressed: () {
             launchUrl(Uri.parse("https://t.me/ergashevTech"));
           },
-          child: const Text("Go to Telegram"),
+          child: Text("Go to Telegram", style: TextStyle(color: textColor)),
         ),
       ),
     );
