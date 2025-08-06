@@ -29,9 +29,12 @@ class SelectLanguage extends StatelessWidget {
     },
   ];
 
-  // Tilni tanlash funksiyasi. Bosilganda tanlangan til kodini Navigator orqali qaytaradi.
-  void _changeLanguage(BuildContext context, String code) {
-    Navigator.pop(context, code); // Tanlangan til kodini qaytaradi
+  // Language selection function. Changes app language and navigates back.
+  void _changeLanguage(BuildContext context, Locale locale) async {
+    await context.setLocale(locale);
+    if (context.mounted) {
+      context.go('/');
+    }
   }
 
   @override
