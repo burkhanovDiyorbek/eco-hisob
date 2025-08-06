@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "Ҳисоб лойиҳаси",
+    "welcome": "Ҳисоб калкуляторига хуш келибсиз",
+    "description": "Шахсий молиявий ва ҳисоб-китоб ёрдамчисиз",
+    "new_calculation": "Янги ҳисоб-китоб",
+    "change_language": "Тилни ўзгартириш"
+  },
+  "language": {
+    "title": "Тилни танланг",
+    "english": "English",
+    "uzbek_latin": "O'zbek tili",
+    "uzbek_cyrillic": "Ўзбек тили",
+    "russian": "Русский"
+  }
+}
