@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:hisob_roject/app/theme.dart';
 
 class SelectLanguage extends StatelessWidget {
-  SelectLanguage({super.key});
+  const SelectLanguage({super.key});
 
   final List<Map<String, dynamic>> languages = [
     {
