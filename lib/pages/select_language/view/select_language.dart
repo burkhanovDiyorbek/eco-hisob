@@ -57,7 +57,7 @@ class SelectLanguage extends StatelessWidget {
             SizedBox(height: 80),
             Center(
               child: Text(
-                "Choose Language",
+                'language.title'.tr(),
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
