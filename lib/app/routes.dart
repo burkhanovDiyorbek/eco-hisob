@@ -7,7 +7,7 @@ final routes = GoRouter(
     GoRoute(path: '/', builder: (context, state) => const HomeScreen()),
     GoRoute(
       path: '/select-language',
-      builder: (context, state) => SelectLanguage(),
+      builder: (context, state) => const SelectLanguage(),
     ),
   ],
 );
