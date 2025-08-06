@@ -132,7 +132,7 @@ class SelectLanguage extends StatelessWidget {
                                 ),
                                 SizedBox(height: 2),
                                 Text(
-                                  '(${lang['code']})',
+                                  '(${lang['locale'].languageCode})',
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: secondaryTextColor,
