@@ -9,14 +9,22 @@ class SelectLanguage extends StatelessWidget {
   final List<Map<String, dynamic>> languages = [
     {
       "name": "O'zbek tili",
-      "code": "uz",
+      "locale": const Locale('uz', 'lat'),
       "image": "assets/images/flags/uz.png",
     },
-    {"name": "English", "code": "en", "image": "assets/images/flags/en.png"},
-    {"name": "Русский", "code": "ru", "image": "assets/images/flags/ru.png"},
+    {
+      "name": "English",
+      "locale": const Locale('en'),
+      "image": "assets/images/flags/en.png"
+    },
+    {
+      "name": "Русский",
+      "locale": const Locale('ru'),
+      "image": "assets/images/flags/ru.png"
+    },
     {
       "name": "Ўзбек тили",
-      "code": "uz_cyr",
+      "locale": const Locale('uz'),
       "image": "assets/images/flags/uz.png",
     },
   ];
