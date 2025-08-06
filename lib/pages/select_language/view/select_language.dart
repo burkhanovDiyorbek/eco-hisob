@@ -78,8 +78,8 @@ class SelectLanguage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(16),
                     onTap: () => _changeLanguage(
                       context,
-                      lang['code'],
-                    ), // Bosilganda til kodini qaytaradi
+                      lang['locale'],
+                    ),
                     child: Container(
                       decoration: BoxDecoration(
                         color: cardColor,
