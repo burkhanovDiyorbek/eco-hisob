@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "Hisob Project",
+    "welcome": "Welcome to Hisob Calculator",
+    "description": "Your personal finance and calculation assistant",
+    "new_calculation": "New Calculation",
+    "change_language": "Change Language"
+  },
+  "language": {
+    "title": "Choose Language",
+    "english": "English",
+    "uzbek_latin": "O'zbek tili",
+    "uzbek_cyrillic": "Ўзбек тили",
+    "russian": "Русский"
+  }
+}

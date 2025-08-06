@@ -1,27 +1,40 @@
 import 'package:flutter/material.dart';
 import 'package:hisob_roject/app/theme.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:go_router/go_router.dart';
 
 class SelectLanguage extends StatelessWidget {
-  SelectLanguage({super.key});
+  const SelectLanguage({super.key});
 
   final List<Map<String, dynamic>> languages = [
     {
       "name": "O'zbek tili",
-      "code": "uz",
+      "locale": const Locale('uz', 'lat'),
       "image": "assets/images/flags/uz.png",
     },
-    {"name": "English", "code": "en", "image": "assets/images/flags/en.png"},
-    {"name": "Русский", "code": "ru", "image": "assets/images/flags/ru.png"},
+    {
+      "name": "English",
+      "locale": const Locale('en'),
+      "image": "assets/images/flags/en.png"
+    },
+    {
+      "name": "Русский",
+      "locale": const Locale('ru'),
+      "image": "assets/images/flags/ru.png"
+    },
     {
       "name": "Ўзбек тили",
-      "code": "uz_cyr",
+      "locale": const Locale('uz'),
       "image": "assets/images/flags/uz.png",
     },
   ];
 
-  // Tilni tanlash funksiyasi. Bosilganda tanlangan til kodini Navigator orqali qaytaradi.
-  void _changeLanguage(BuildContext context, String code) {
-    Navigator.pop(context, code); // Tanlangan til kodini qaytaradi
+  // Language selection function. Changes app language and navigates back.
+  void _changeLanguage(BuildContext context, Locale locale) async {
+    await context.setLocale(locale);
+    if (context.mounted) {
+      context.go('/');
+    }
   }
 
   @override
@@ -44,7 +57,7 @@ class SelectLanguage extends StatelessWidget {
             SizedBox(height: 80),
             Center(
               child: Text(
-                "Choose Language",
+                'language.title'.tr(),
                 style: TextStyle(
                   fontSize: 20,
                   fontWeight: FontWeight.w500,
@@ -65,8 +78,8 @@ class SelectLanguage extends StatelessWidget {
                     borderRadius: BorderRadius.circular(16),
                     onTap: () => _changeLanguage(
                       context,
-                      lang['code'],
-                    ), // Bosilganda til kodini qaytaradi
+                      lang['locale'],
+                    ),
                     child: Container(
                       decoration: BoxDecoration(
                         color: cardColor,
@@ -119,7 +132,7 @@ class SelectLanguage extends StatelessWidget {
                                 ),
                                 SizedBox(height: 2),
                                 Text(
-                                  '(${lang['code']})',
+                                  '(${lang['locale'].languageCode})',
                                   style: TextStyle(
                                     fontSize: 14,
                                     color: secondaryTextColor,
