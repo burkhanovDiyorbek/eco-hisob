@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -22,7 +23,8 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           onPressed: () {
-            launchUrl(Uri.parse("https://t.me/ergashevTech"));
+            // launchUrl(Uri.parse("https://t.me/ergashevTech"));
+            context.push('/select-language');
           },
           child: Text("Go to Telegram", style: TextStyle(color: textColor)),
         ),
