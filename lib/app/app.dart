@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hisob_roject/app/routes.dart';
 import 'package:hisob_roject/app/theme.dart';
+import 'package:easy_localization/easy_localization.dart';
 
 class App extends StatelessWidget {
   const App({super.key});
@@ -12,6 +13,9 @@ class App extends StatelessWidget {
       theme: AppTheme.lightTheme,
       darkTheme: AppTheme.darkTheme,
       themeMode: ThemeMode.system,
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
     );
   }
 }
