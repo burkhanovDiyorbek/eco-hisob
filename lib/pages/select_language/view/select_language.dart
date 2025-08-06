@@ -4,23 +4,23 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:go_router/go_router.dart';
 
 class SelectLanguage extends StatelessWidget {
-  const SelectLanguage({super.key});
+  SelectLanguage({super.key});
 
   final List<Map<String, dynamic>> languages = [
     {
       "name": "O'zbek tili",
-      "locale": const Locale('uz', 'lat'),
+      "locale": const Locale('uz', 'Latn'),
       "image": "assets/images/flags/uz.png",
     },
     {
       "name": "English",
       "locale": const Locale('en'),
-      "image": "assets/images/flags/en.png"
+      "image": "assets/images/flags/en.png",
     },
     {
       "name": "Русский",
       "locale": const Locale('ru'),
-      "image": "assets/images/flags/ru.png"
+      "image": "assets/images/flags/ru.png",
     },
     {
       "name": "Ўзбек тили",
@@ -29,7 +29,6 @@ class SelectLanguage extends StatelessWidget {
     },
   ];
 
-  // Language selection function. Changes app language and navigates back.
   void _changeLanguage(BuildContext context, Locale locale) async {
     await context.setLocale(locale);
     if (context.mounted) {
@@ -40,7 +39,9 @@ class SelectLanguage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    final mainColor = isDark ? AppTheme.darkBackgroundColor : AppTheme.mainColor;
+    final mainColor = isDark
+        ? AppTheme.darkBackgroundColor
+        : AppTheme.mainColor;
     final mainTextColor = isDark
         ? AppTheme.darkMainTextColor
         : AppTheme.mainTextColor;
@@ -66,7 +67,6 @@ class SelectLanguage extends StatelessWidget {
               ),
             ),
             SizedBox(height: 40),
-            // Til ro'yxati
             Expanded(
               child: ListView.separated(
                 padding: EdgeInsets.symmetric(horizontal: 24),
@@ -76,10 +76,7 @@ class SelectLanguage extends StatelessWidget {
                   final lang = languages[index];
                   return InkWell(
                     borderRadius: BorderRadius.circular(16),
-                    onTap: () => _changeLanguage(
-                      context,
-                      lang['locale'],
-                    ),
+                    onTap: () => _changeLanguage(context, lang['locale']),
                     child: Container(
                       decoration: BoxDecoration(
                         color: cardColor,

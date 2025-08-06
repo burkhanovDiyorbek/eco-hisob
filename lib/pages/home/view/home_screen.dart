@@ -8,7 +8,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final colorScheme = Theme.of(context).colorScheme;
-    final textColor = colorScheme.onPrimary;
+    // final textColor = colorScheme.onPrimary;
     final buttonColor = colorScheme.primary;
 
     return Scaffold(
@@ -52,7 +52,6 @@ class HomeScreen extends StatelessWidget {
                       icon: const Icon(Icons.add),
                       label: Text('home.new_calculation'.tr()),
                       onPressed: () {
-                        // TODO: Navigate to calculation page
                       },
                     ),
                   ),

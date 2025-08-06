@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "Hisob loyihasi",
+    "welcome": "Hisob kalkulyatoriga xush kelibsiz",
+    "description": "Shaxsiy moliyaviy va hisob-kitob yordamchingiz",
+    "new_calculation": "Yangi hisob-kitob",
+    "change_language": "Tilni o'zgartirish"
+  },
+  "language": {
+    "title": "Tilni tanlang",
+    "english": "English",
+    "uzbek_latin": "O'zbek tili",
+    "uzbek_cyrillic": "Ўзбек тили",
+    "russian": "Русский"
+  }
+}

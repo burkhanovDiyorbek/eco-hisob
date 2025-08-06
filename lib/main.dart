@@ -12,7 +12,7 @@ void main() async {
         Locale('en'),
         Locale('ru'),
         Locale('uz'),
-        Locale('uz', 'lat'),
+        Locale('uz', 'Latn'),
       ],
       path: 'assets/i18n',
       fallbackLocale: const Locale('en'),

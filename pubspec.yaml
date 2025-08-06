@@ -39,3 +39,7 @@ flutter:
     - assets/i18n/
     - assets/images/
     - assets/images/flags/
+    - assets/images/flags/uz.png
+    - assets/images/flags/en.png
+    - assets/images/flags/ru.png
+    - assets/i18n/uz_Latn.json
