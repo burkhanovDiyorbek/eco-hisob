@@ -1,0 +1,16 @@
+{
+  "home": {
+    "title": "Проект Хисоб",
+    "welcome": "Добро пожаловать в калькулятор Хисоб",
+    "description": "Ваш персональный помощник по финансам и расчетам",
+    "new_calculation": "Новый расчёт",
+    "change_language": "Изменить язык"
+  },
+  "language": {
+    "title": "Выберите язык",
+    "english": "English",
+    "uzbek_latin": "O'zbek tili",
+    "uzbek_cyrillic": "Ўзбек тили",
+    "russian": "Русский"
+  }
+}
